@@ -9,27 +9,27 @@
 
 ### Login & Logout
 
-- [ ] Add the provided Django authentication views to the project's URLconf.
-- [ ] Test `/accounts/login` in your browser --- see if you can log in using username `admin` and password `djangopony`.
-- [ ] In `base.html`, hide the `New Page` and `Log Out` buttons for unauthenticated users.
-- [ ] When a user clicks `Log Out`, they are logged out of the system, and returned to the homepage.
-- [ ] When a user clicks `Log In`, they are navigated to the Login page.
-- [ ] Replace `Hello, USERNAME` text with the username of the logged-in user, and only show it when the user is logged in.
+- [x] Add the provided Django authentication views to the project's URLconf.
+- [x] Test `/accounts/login` in your browser --- see if you can log in using username `admin` and password `djangopony`.
+- [x]In `base.html`, hide the `New Page` and `Log Out` buttons for unauthenticated users.
+- [x] When a user clicks `Log Out`, they are logged out of the system, and returned to the homepage.
+- [x] When a user clicks `Log In`, they are navigated to the Login page.
+- [x] Replace `Hello, USERNAME` text with the username of the logged-in user, and only show it when the user is logged in.
 
 ### Signup
 
-- [ ] Create a new app named `accounts`. Add it to the `INSTALLED_APPS` list in `settings.py`.
-- [ ] Create a view for signing up:
-    - [ ] Must subclass `django.views.generic.CreateView`.
-    - [ ] Set `form_class` to `django.auth.forms.UserCreationForm`.
-    - [ ] Render the `registration/signup.html` template.
-- [ ] In `accounts/urls.py`, link `SignupView` to a URL named `signup`.
-- [ ] Add `accounts.urls` to the project's URLconf.
-- [ ] When a user clicks `Sign Up`, they are presented with a form to create an account, and can submit it successfully.
+- [x] Create a new app named `accounts`. Add it to the `INSTALLED_APPS` list in `settings.py`.
+- [x] Create a view for signing up:
+    - [x] Must subclass `django.views.generic.CreateView`.
+    - [x] Set `form_class` to `django.auth.forms.UserCreationForm`.
+    - [x] Render the `registration/signup.html` template.
+- [x] In `accounts/urls.py`, link `SignupView` to a URL named `signup`.
+- [x] Add `accounts.urls` to the project's URLconf.
+- [x] When a user clicks `Sign Up`, they are presented with a form to create an account, and can submit it successfully.
 
 ### Stretch Challenges
 
-- [ ] Add a `Forgot Password` link to the Log in page.
+- [x] Add a `Forgot Password` link to the Log in page.
 
 ---
 
@@ -39,30 +39,30 @@
 
 #### `makewiki/urls.py`
 
-- [ ] Uncomment the `path()` for the `wiki` app below. Use it to direct any request (except `/admin` URLs) to the the `wiki` app's URL configuration. Use the above docstring to guide you if you feel stuck.
-- [ ] Make sure Django doesn't give you any warnings or errors when you execute `python manage.py runserver`.
+- [x] Uncomment the `path()` for the `wiki` app below. Use it to direct any request (except `/admin` URLs) to the the `wiki` app's URL configuration. Use the above docstring to guide you if you feel stuck.
+- [x] Make sure Django doesn't give you any warnings or errors when you execute `python manage.py runserver`.
 
 #### `wiki/views.py`
 
 `PageListView`:
 
-- [ ] On `GET`, display a homepage that shows all Pages in your wiki.
-- [ ]  Replace the CHALLENGE text with a descriptive docstring for `PageListView`.
-- [ ] Replace `pass` below with the code to render a template named `list.html`.
+- [x] On `GET`, display a homepage that shows all Pages in your wiki.
+- [x]  Replace the CHALLENGE text with a descriptive docstring for `PageListView`.
+- [x] Replace `pass` below with the code to render a template named `list.html`.
 
 #### `wiki/urls.py`
 
- - [ ] Refactor the URL named `wiki-list-page` and point it to the root route (`/`).
+ - [x] Refactor the URL named `wiki-list-page` and point it to the root route (`/`).
       - Make sure Django doesn't give you any warnings or errors when you execute `python manage.py runserver`.
       - Test by visiting http://127.0.0.1:8000/.
-- [ ] Refactor the URL named `wiki-details-page` to show the `DetailsView` for any `Page` that exists.
+- [x] Refactor the URL named `wiki-details-page` to show the `DetailsView` for any `Page` that exists.
       - Use the `slug` field in the `Page` model to accomplish this.
       - DO NOT CHANGE the `name` argument.
       - Test by visiting http://127.0.0.1:8000/title-slug in your browser.
 
 #### `templates/base.html`
 
-- [ ]  `📓 Pages`: Replace `#` with the `url` template tag.
+- [x]  `📓 Pages`: Replace `#` with the `url` template tag.
 
 ---
 

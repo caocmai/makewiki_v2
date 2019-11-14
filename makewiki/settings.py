@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'wiki'
+    'wiki',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -134,6 +135,13 @@ WIKI_PAGE_TITLE_MAX_LENGTH = 600
 # Where to redirect during authentication
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
+
+# Just added this from BEW1.2 slides
+DEFAULT_LOGOUT_URL = '/'
+
+# Added this from tutorial wsvincent to reset password via email
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
 
 # Required for Heroku
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
