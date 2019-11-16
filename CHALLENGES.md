@@ -11,7 +11,7 @@
 
 - [x] Add the provided Django authentication views to the project's URLconf.
 - [x] Test `/accounts/login` in your browser --- see if you can log in using username `admin` and password `djangopony`.
-- [x]In `base.html`, hide the `New Page` and `Log Out` buttons for unauthenticated users.
+- [x] In `base.html`, hide the `New Page` and `Log Out` buttons for unauthenticated users.
 - [x] When a user clicks `Log Out`, they are logged out of the system, and returned to the homepage.
 - [x] When a user clicks `Log In`, they are navigated to the Login page.
 - [x] Replace `Hello, USERNAME` text with the username of the logged-in user, and only show it when the user is logged in.
@@ -47,7 +47,7 @@
 `PageListView`:
 
 - [x] On `GET`, display a homepage that shows all Pages in your wiki.
-- [x]  Replace the CHALLENGE text with a descriptive docstring for `PageListView`.
+- [x] Replace the CHALLENGE text with a descriptive docstring for `PageListView`.
 - [x] Replace `pass` below with the code to render a template named `list.html`.
 
 #### `wiki/urls.py`
@@ -62,7 +62,7 @@
 
 #### `templates/base.html`
 
-- [x]  `📓 Pages`: Replace `#` with the `url` template tag.
+- [x] `📓 Pages`: Replace `#` with the `url` template tag.
 
 ---
 
