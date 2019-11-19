@@ -14,10 +14,13 @@ class SignUpView(CreateView):
   form_class = UserCreateForm
   success_url = reverse_lazy('login')
   
+  # This works because using the CreatView and using template name with it to show the page
   template_name = 'registration/signup.html'
         # return render(request, template_name, {
         #   'form': form_class
         # })
+
+  
 
 class Sayhi(CreateView):
   def get(self, request):

@@ -30,8 +30,9 @@ urlpatterns = [
     path('', include('wiki.urls')),
 
     # For User Authentication
+    path('accounts/', include('accounts.urls')), # I already have this
     path('accounts/', include('django.contrib.auth.urls')),
 
-    path('test/', include('accounts.urls')),
+    # path('test/', include('accounts.urls')),
 
 ]
