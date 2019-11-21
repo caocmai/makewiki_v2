@@ -7,6 +7,9 @@ class PageForm(forms.ModelForm):
     class Meta:
         model = Page
         fields = ("title", "content", "author")
+        help_texts = {
+            'content': "Enter your content here"
+        }
 
 class FriendlyForm(forms.Form):
     first_name = forms.CharField(max_length=100)

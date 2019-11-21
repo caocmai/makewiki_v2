@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic import CreateView
+
 from wiki.forms import PageForm
 from wiki.models import Page
 from django.urls import reverse_lazy
@@ -32,14 +33,24 @@ class PageDetailView(DetailView):
         })
 
 class CreateWikiView(CreateView):
-  def get(self, request, *args, **kwargs):
-    context = {'form': PageForm()}
-    return render(request, 'new_wiki.html', context)
 
+  form_class = PageForm
+  # success_url = reverse_lazy('list.html')
+  template_name = "new_wiki.html"
+
+  # def get(self, request, *args, **kwargs):
+  #   context = {'form': PageForm()}
+  #   return render(request, 'new_wiki.html', context)
+
+  # args and kwards in not needed for this to work
   def post(self, request, *args, **kwargs):
       form = PageForm(request.POST)
       if form.is_valid():
           wiki = form.save()
           wiki.save()
           return HttpResponseRedirect(reverse_lazy('wiki-details-page', args=[wiki.slug]))
-      return render(request, 'new_wiki.html', {'form': form})
+
+          # Or can be this
+          # return HttpResponseRedirect(reverse_lazy('wiki-list-page'))
+
+      # return render(request, 'new_wiki.html', {'form': form})
