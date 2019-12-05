@@ -25,12 +25,15 @@ SECRET_KEY = '1yct-t!2bnkgc7j59z+9cdd2k)@y+ftqor$!aya()3if^cnlo-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'cao-makewiki.herokuapp.com']
+
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    # Contrib goes first
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Then the framwork or 3rd party apps
+    'rest_framework',
+
+    # Then your apps
     'wiki',
     'accounts',
 ]
@@ -126,7 +133,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+# This is so if you can have static file in each app itself(note: quote is named whater you want to)
 STATIC_URL = '/static/'
+
+# Add this line to add a global css file to staticfiles, to do it one time(global)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "staticfiles"), 
+]
+
+# Added for heroku
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # wiki app settings
 WIKI_PAGE_TITLE_MAX_LENGTH = 600

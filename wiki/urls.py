@@ -7,7 +7,7 @@ urlpatterns = [
     path('new_wiki/', CreateWikiView.as_view(), name='wiki-new-page'),
     path('<str:slug>/', PageDetailView.as_view(), name='wiki-details-page'),
     # Make sure have leading and ending slashes when using slaahes or else won't work
-    # Slahes matters!
+    # Slahes matters!, actually it's the ordering that matters
     # new_wiki.html does work, but why?
     
 ]
