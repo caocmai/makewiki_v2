@@ -141,7 +141,7 @@ STATICFILES_DIRS = [
 ]
 
 # Added for heroku
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # wiki app settings
