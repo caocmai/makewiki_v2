@@ -29,7 +29,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['localhost', 'cao-makewiki.herokuapp.com']
 
 
-
 # Application definition
 
 INSTALLED_APPS = [
