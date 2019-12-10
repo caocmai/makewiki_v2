@@ -132,13 +132,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 # This is so if you can have static file in each app itself(note: quote is named whater you want to)
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 
 # # # Add this line to add a global css file to staticfiles, to do it one time(global)
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "staticfiles"), 
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "staticfiles"), 
+# ]
 
 # # Added for heroku
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
