@@ -136,16 +136,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # # # Add this line to add a global css file to staticfiles, to do it one time(global)
-# # STATICFILES_DIRS = [
-# #     os.path.join(BASE_DIR, "staticfiles"), 
-# # ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "staticfiles"), 
+]
 
 # # Added for heroku
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+# ]
 
 
 # wiki app settings
